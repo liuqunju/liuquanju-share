@@ -12,6 +12,12 @@ import java.util.List;
 
 public class MqOrderListener implements MessageListenerOrderly {
 
+    /**
+     * 娘的三轮
+     * @param list
+     * @param consumeOrderlyContext
+     * @return
+     */
     @Override
     public ConsumeOrderlyStatus consumeMessage(List<MessageExt> list, ConsumeOrderlyContext consumeOrderlyContext) {
         if (CollectionUtils.isEmpty(list)) {
