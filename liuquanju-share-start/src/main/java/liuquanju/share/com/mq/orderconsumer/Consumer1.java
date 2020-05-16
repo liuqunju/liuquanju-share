@@ -24,9 +24,6 @@ public class Consumer1 {
         } catch (MQClientException e) {
             e.printStackTrace();
         }
-
-
-
         return consumer;
     }
 
