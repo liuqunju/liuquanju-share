@@ -18,6 +18,10 @@ import java.util.List;
 @Configuration
 public class Producer {
 
+    /**
+     * 生产者
+     * @return
+     */
     @Bean("testProducer")
     public DefaultMQProducer orderProducer(){
         DefaultMQProducer mqProducer = new DefaultMQProducer("Test_MqProducerGroup");
