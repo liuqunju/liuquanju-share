@@ -11,5 +11,5 @@
 *.jar
 *.war
 *.zip
-*.rar
+#*.rar
 *.tar.gz
