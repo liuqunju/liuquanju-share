@@ -11,7 +11,11 @@
 
     <artifactId>liuquanju-share-facade-api</artifactId>
     <dependencies>
-
+        <dependency>
+            <groupId>liuquanju.share.com</groupId>
+            <artifactId>liuquanju-share-base</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 

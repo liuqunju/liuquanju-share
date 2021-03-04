@@ -11,28 +11,12 @@
 
     <artifactId>liuquanju-share-start</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>liuquanju.share.com</groupId>
+            <artifactId>liuquanju-share-base</artifactId>
+            <version>${project.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-        <groupId>liuquanju.share.com</groupId>
-        <artifactId>liuquanju-share-base</artifactId>
-        <version>${project.version}</version>
-    </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,6 +34,11 @@
             <artifactId>liuquanju-share-business-api-impl</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+            <version>2.2.3.RELEASE</version>
         </dependency>
     </dependencies>
 

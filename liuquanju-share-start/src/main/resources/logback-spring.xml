@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true"  debug="false">
+
+    <springProperty scop="context" name="spring.application.name" source="spring.application.name" defaultValue=""/>
+    <!--日志存放路径-->
+    <property name="PATH" value="logs"/>
+
+    <property name="FILE_NAME" value="${spring.application.name}"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta([PID:${PID:-}]) %green([%15.15thread]) %cyan(%40.40logger:%-5.5L):%msg%n</pattern>
+        </encoder>
+    </appender>
+    <!--trace-->
+    <appender name="TRACE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/${FILE_NAME}_trace.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${PATH}/${FILE_NAME}_trace.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %highlight([%-5level]) %green([%15.15thread]) %cyan([%logger:%line])--%mdc{client} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--error-->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/${FILE_NAME}_error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${PATH}/${FILE_NAME}_error.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %highlight([%-5level]) %green([%15.15thread]) %cyan([%logger:%line])--%mdc{client} %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="TRACE_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+</configuration>
