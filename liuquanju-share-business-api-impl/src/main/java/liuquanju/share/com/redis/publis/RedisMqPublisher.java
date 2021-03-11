@@ -1,9 +1,9 @@
-package liuquanju.share.com.redis.mq.publis;
+package liuquanju.share.com.redis.publis;
 
-import liuquanju.share.com.redis.mq.constant.RedisMqConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
@@ -12,6 +12,7 @@ import javax.annotation.Resource;
  * @Author: yingjie.liu
  * @Date: 2021/03/03/17:41
  */
+@Component
 public class RedisMqPublisher {
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisMqPublisher.class);
 
@@ -25,5 +26,7 @@ public class RedisMqPublisher {
      */
     public void publish(String topic, Object message) {
         redisTemplate.convertAndSend(topic, message);
+        LOGGER.info("================ redis mq publish success, topic:{} --- msg:{}", topic, message);
+
     }
 }

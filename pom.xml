@@ -21,11 +21,12 @@
     <modules>
         <module>liuquanju-share-start</module>
         <module>liuquanju-share-utils</module>
-        <module>liuquanju-share-facade-api</module>
-        <module>liuquanju-share-facade-api-impl</module>
+<!--        <module>liuquanju-share-facade-api</module>-->
+<!--        <module>liuquanju-share-facade-api-impl</module>-->
         <module>liuquanju-share-business-api</module>
         <module>liuquanju-share-business-api-impl</module>
         <module>liuquanju-share-base</module>
+        <module>liuquanju-share-facade</module>
     </modules>
 
 

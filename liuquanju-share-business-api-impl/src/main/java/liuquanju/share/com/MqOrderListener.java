@@ -1,4 +1,4 @@
-package liuquanju.share.com.listener;
+package liuquanju.share.com;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;

@@ -40,6 +40,12 @@
             <artifactId>spring-cloud-context</artifactId>
             <version>2.2.3.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>liuquanju.share.com</groupId>
+            <artifactId>liuquanju-share-facade</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

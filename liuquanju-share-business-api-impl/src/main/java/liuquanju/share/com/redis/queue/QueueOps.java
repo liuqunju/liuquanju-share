@@ -1,4 +1,4 @@
-package liuquanju.share.com.redis.mq.queue;
+package liuquanju.share.com.redis.queue;
 
 import javax.annotation.Resource;
 
@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import liuquanju.share.com.redis.mq.constant.RedisMqConstant;
+import liuquanju.share.com.redis.constant.RedisMqConstant;
 
 /**
  * @Description:

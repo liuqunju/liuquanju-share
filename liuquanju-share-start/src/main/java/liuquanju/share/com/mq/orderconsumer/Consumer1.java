@@ -1,6 +1,6 @@
 package liuquanju.share.com.mq.orderconsumer;
 
-import liuquanju.share.com.listener.MqOrderListener;
+import liuquanju.share.com.MqOrderListener;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;

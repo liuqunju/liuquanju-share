@@ -1,4 +1,4 @@
-package liuquanju.share.com.redis.mq;
+package liuquanju.share.com.redis;
 
 import redis.clients.jedis.Jedis;
 

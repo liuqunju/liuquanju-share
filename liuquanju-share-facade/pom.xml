@@ -9,12 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>liuquanju-share-business-api</artifactId>
+    <artifactId>liuquanju-share-facade</artifactId>
+
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>liuquanju.share.com</groupId>
-            <artifactId>liuquanju-share-facade</artifactId>
+            <artifactId>liuquanju-share-base</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
+
+        <dependency>
+            <groupId>liuquanju.share.com</groupId>
+            <artifactId>liuquanju-share-business-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
+
 </project>

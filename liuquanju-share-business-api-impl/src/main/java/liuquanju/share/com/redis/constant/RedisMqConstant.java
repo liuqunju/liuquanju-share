@@ -1,4 +1,4 @@
-package liuquanju.share.com.redis.mq.constant;
+package liuquanju.share.com.redis.constant;
 
 /**
  * @Description:
